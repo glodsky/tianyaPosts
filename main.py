@@ -179,7 +179,7 @@ def handlepage(html,url,maindiv = False):
                 reposts_count =  0
                 comments_count = 0
                 #print("%s  %s  %s  %s  %s  %s"%(wb_address,wb_detail,create_at,attitudes_count,comments_count,reposts_count))
-                data = (wb_address,wb_detail,create_at,attitudes_count,comments_count,reposts_count)
+                data = (wb_address,create_at,wb_detail,attitudes_count,comments_count,reposts_count)   
                 if not exists_in_db(data,'data.db'):
                         insert_into_db(data,'data.db')        
 
